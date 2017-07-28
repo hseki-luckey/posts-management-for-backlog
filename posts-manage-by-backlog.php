@@ -15,21 +15,11 @@ register_activation_hook(__FILE__, 'add_backlog_ids_table');
 
 /* Backlog連携設定 */
 function register_backlog_setting_field(){
-	add_settings_section('backlog', 'Backlog連携', 'backlog_section_message', 'writing');
+	add_settings_section('backlog', 'Backlog連携', '', 'writing');
 	add_settings_field('backlog_space_id', 'スペースID', 'backlog_space_id_form', 'writing', 'backlog');
 	add_settings_field('backlog_project_id', 'プロジェクトID', 'backlog_project_id_form', 'writing', 'backlog');
 	add_settings_field('backlog_issues_type_id', '課題種別ID', 'backlog_issues_type_id_form', 'writing', 'backlog');
 	add_settings_field('backlog_api_key', 'APIキー', 'backlog_api_key_form', 'writing', 'backlog');
-}
-
-function backlog_section_message(){
-	$webhook_url = plugin_dir_url(__FILE__).'webhook.php';
-?>
-<p>
-	Backlog上で「WebHook URL」として登録してください。<br />
-	<?php echo $webhook_url; ?>
-</p>
-<?php
 }
 
 function add_backlog_setting_field($whitelist_options){
