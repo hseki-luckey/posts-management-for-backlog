@@ -5,7 +5,7 @@
 記事投稿とBacklogを連動させ、管理するためのプラグインです。  
 詳しくは以下を参照してください。
 
-* 紹介記事：https://tech.linkbal.co.jp/2937/
+* 紹介記事：https://tech.linkbal.co.jp/2932/
 
 ## 設定内容
 
